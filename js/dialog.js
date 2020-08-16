@@ -23,9 +23,6 @@ Vue.component("kkb-dialog", {
     `,
 
   methods: {
-    open() {
-      this.$emit("update:visible", true);
-    },
     close() {
       this.$emit("update:visible", false);
     },
