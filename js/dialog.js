@@ -1,7 +1,13 @@
 Vue.component("kkb-dialog", {
   props: {
-    title: "标题",
-    visible: false,
+    title: {
+      type: String,
+      default: "",
+    },
+    visible: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   template: `
