@@ -21,7 +21,15 @@ Vue.component("kkb-dialog", {
             </div>
         </div>
     `,
-
+  // computed: 根据某些东西的变化产生数据
+  // 当组件当某个状态（数据）发生变化以后，需要去做一些事情，那么就可以通过 watch 来实现
+  // watch 与 computed ： watch 支持异步任务
+  watch: {
+    visible() {
+      console.log(this.visible);
+      this.$emit(this.visible ? "open" : "close");
+    },
+  },
   methods: {
     close() {
       this.$emit("update:visible", false);
