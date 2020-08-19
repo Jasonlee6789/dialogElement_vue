@@ -11,6 +11,7 @@
     <div id="app">
       <button @click="visible=!visible">按钮</button>
 
+      <!-- v-bind 去把父级中定义的变量传递给子组件 -->
       <kkb-dialog
         :title="title"
         :visible.sync="visible"
@@ -38,7 +39,7 @@
 
           close() {
             console.log("关闭了");
-            // f父级发送一个请求
+            // 父级发送一个请求
           },
         },
       });

@@ -34,7 +34,8 @@ Vue.component("kkb-dialog", {
     close() {
       this.$emit("update:visible", false);
 
-      this.$emit("close");
+      // this.$emit("close");
     },
   },
+  //在子组件中触发原生的``事件，在函数中使用$emit触发自定义的childHandler
 });
